@@ -41,3 +41,32 @@ radtest testing password localhost 0 testing123
 ```
 
 Where testing is the user name configured above, and password is the password for the user. These can be real user names and passwords, of course.
+
+## Deploy use opswork
+
+1. Create opswork stack
+
+2. Add cook book from repo git
+
+![radius](images/radius-1.png)
+
+3. Create instances ec2 
+
+![radius](images/radius-2.png)
+
+4. Creat apps
+ 
+![radius](images/radius-3.png)
+
+5. Run Deployments 
+
+* Choose Run Command, add command run receipes and choose instances
+
+![radius](images/radius-4.png)
+
+6. Test connect radius 
+
+ip radius: 54.241.137.117 
+
+![radius](images/radius-5.png)
+

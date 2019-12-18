@@ -1,0 +1,13 @@
+# -*- text -*-
+##
+## clients.conf -- client configuration directives
+##
+##      $Id$
+
+<% node['freeradius']['clients'].each do |client, client_hash| %>
+client <%= client %> {
+  ipaddr = <%= client_hash['ipaddr']  %>
+  secret = <%= client_hash['secret'] %>
+  nas_type = <%= client_hash['nastype'] %>
+}
+<% end %>

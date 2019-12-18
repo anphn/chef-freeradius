@@ -1,0 +1,15 @@
+[Unit]
+Description=FreeRADIUS high performance RADIUS server.
+After=syslog.target network.target
+
+[Service]
+Type=forking
+PIDFile=/usr/local/var/run/radiusd/radiusd.pid
+ExecStartPre=-/bin/chown -R root:root /usr/local/var/run/radiusd
+ExecStartPre=/usr/local/sbin/radiusd -C
+ExecStart=/usr/local/sbin/radiusd -d <%= node['freeradius']['dir'] %>
+ExecReload=/usr/local/sbin/radiusd -C
+ExecReload=/bin/kill -HUP $MAINPID
+
+[Install]
+WantedBy=multi-user.target

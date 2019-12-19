@@ -5,7 +5,7 @@
 * chef_version '>= 12.0'
 * sql use postgresql 
 * Freeradius version 3.0.4
-
+* CentOS 7
 ## Usage
 Enable sql support 
 
@@ -14,6 +14,7 @@ default['freeradius']['enable_sql'] = true
 ```
 
 Change attributes or override the following attributes in a wrapper cookbook as such
+```bash 
 
 node.override['freeradius']['enable_sql'] = true
 node.override['freeradius']['db_type'] = "postgresql"
@@ -23,6 +24,7 @@ node.override['freeradius']['db_name'] = "radius"
 node.override['freeradius']['db_login'] = "radius"
 node.override['freeradius']['db_password'] = "radius"
 
+```
 
 ## Create postgresSQL Database
 

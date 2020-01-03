@@ -26,5 +26,3 @@ default['freeradius']['clients'] = {
   }
 }
 default['freeradius']['url'] = "https://github.com/FreeRADIUS/freeradius-server/archive"
-default['freeradius']['version'] = "3_0_4"
-
